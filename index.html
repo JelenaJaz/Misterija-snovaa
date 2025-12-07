@@ -11,8 +11,8 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #000; /* crna pozadina */
-    color: #b08d57; /* bronza/nude boja */
+    background-color: #000;
+    color: #b08d57;
 }
 
 /* HERO SEKCIA */
@@ -30,7 +30,7 @@ body {
     width: 50%;
     max-width: 500px;
     border-radius: 20px;
-    border: 4px solid #b08d57; /* bronzani okvir */
+    border: 4px solid #b08d57;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -45,7 +45,7 @@ body {
     padding-left: 20px;
 }
 
-.hero-text h1 {
+.hero-text h1, .hero-text h2 {
     font-family: 'Cinzel', serif;
     font-size: 60px;
     margin: 0;
@@ -57,26 +57,22 @@ body {
 
 .hero-text p {
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 15px;
+    line-height: 1.7;
     background: linear-gradient(45deg, #b08d57, #c9a27d);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-    line-height: 1.6;
 }
 
-/* KLASA ZA K.G.JUNG */
+/* CITATI */
 .citat {
     text-align: center;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-    margin-top: 15px;
     font-size: 18px;
+    margin-top: 15px;
 }
 
-/* TEKST SEKCIJA ISPOD HERO */
+/* TEKST SEKCIJA */
 .text-section {
     max-width: 900px;
     margin: 0 auto 80px auto;
@@ -84,25 +80,93 @@ body {
 }
 
 .text-section h2 {
-    font-family: 'Cinzel', serif;
+    text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
-    text-align: center;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
 }
 
 .text-section p {
+    text-align: justify;
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
+}
+
+/* SANOVI SEKCIJA */
+.dreams-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.dreams-section h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.dreams-section p {
     text-align: justify;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+/* E-BOOK SEKCIJA */
+.ebook-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 4px solid #b08d57;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(176,141,87,0.4);
+    background-color: rgba(0,0,0,0.85);
+}
+
+/* MOTIVACIONA SEKCIJA */
+.motivation-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 4px solid #b08d57;
+    border-radius: 20px;
+    background-color: #000;
+    color: #b08d57;
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.motivation-section h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.motivation-section p {
+    font-size: 18px;
+    margin: 15px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #000;
+    color: #b08d57;
+    font-family: Arial, sans-serif;
+}
+
+footer hr {
+    border: 0;
+    height: 2px;
+    background: #b08d57;
+    width: 80%;
+    margin: 0 auto 20px auto;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
 }
 
 /* RESPONSIVE */
@@ -118,24 +182,36 @@ body {
         padding: 0;
     }
 
-    .hero-text h1 {
+    .hero-text h1, .hero-text h2 {
         font-size: 40px;
     }
 
-    .hero-text p, .citat, .text-section p {
+    .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
         font-size: 16px;
     }
 
     .text-section h2 {
         font-size: 28px;
+    }
+
+    .dreams-section h2 {
+        font-size: 32px;
         margin-bottom: 20px;
+    }
+
+    .motivation-section h2 {
+        font-size: 36px;
+    }
+
+    footer p {
+        font-size: 14px;
     }
 }
 </style>
 </head>
 <body>
 
-<!-- HERO SEKCIA -->
+<!-- HERO 1 -->
 <div class="hero">
     <img src="jelena.jpg" alt="Misterija snova">
     <div class="hero-text">
@@ -156,22 +232,17 @@ body {
     <p>Moja priča zaista počinje u januaru 2024. godine. Tada počinjem da beležim snove, vodim dnevnik snova i istražujem sopstveni svet, osluškujući signale svoje intuicije. Bez ikakvog formalnog znanja, sa velikom željom i otvorenim srcem, započinjem svoj put promene i samospoznaje.</p>
 </div>
 
-
-
-
-<!-- HERO 2 SEKCIA - TEKST LEVO, SLIKA DESNO -->
-<div class="hero">
+<!-- HERO 2 - TEKST LEVO, SLIKA DESNO -->
+<div class="hero" style="flex-direction: row-reverse;">
+    <img src="slika.jpg" alt="Moj put kroz snove">
     <div class="hero-text">
         <h1>Moj put kroz snove</h1>
         <p>Dve godine analizirajući svoje snove, kojih je bilo preko 1000, krenula sam čitanjem knjiga Frojda, Junga, Ivana Nastovica i drugih. Savladala sam tehnike analize i pročistila sebe. Bilo je bolno, nije bilo lako, ali je izuzetno moćno.</p>
         <p>Ja sam JA. Ono što sam oduvek bila. Oprostila sebi, oprostila drugima i pronašla unutrašnji mir. Put samospoznaje i razumevanja sopstvenih snova bio je težak, ali dragocen.</p>
     </div>
-    <img src="slika.jpg" alt="Moj put kroz snove">
-</div>
 </div>
 
-
-<!-- SEKCIJA 2 -->
+<!-- HERO 3 - SLIKA LEVO, TEKST DESNO -->
 <div class="hero">
     <img src="slika2.jpg" alt="Moj kvantni skok">
     <div class="hero-text">
@@ -183,72 +254,8 @@ body {
     </div>
 </div>
 
-<style>
-/* HERO SEKCIJA 2 */
-.hero img {
-    width: 50%;
-    max-width: 500px;
-    border-radius: 20px;
-    border: 4px solid #b08d57; /* bronzani okvir */
-    box-shadow: 0 8px 20px rgba(176,141,87,0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(176,141,87,0.7); 
-}
-
-.hero-text {
-    width: 50%;
-    padding-left: 40px;
-}
-
-.hero-text h1 {
-    font-family: 'Cinzel', serif;
-    font-size: 50px;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
-}
-
-.hero-text p {
-    font-size: 18px;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    color: #b08d57;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img, .hero-text {
-        width: 90%;
-        padding: 0;
-    }
-
-    .hero-text h1 {
-        font-size: 40px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-}
-</style>
-
-
-
-
-
-<!-- TREĆA SEKCIA -->
-<div class="hero" style="margin-top: 60px; flex-direction: row-reverse;">
+<!-- HERO 4 - ENERGIJA -->
+<div class="hero" style="flex-direction: row-reverse;">
     <img src="slika3.jpg" alt="Energetski put">
     <div class="hero-text">
         <h2>ENERGIJA</h2>
@@ -258,73 +265,7 @@ body {
     </div>
 </div>
 
-<style>
-.hero img {
-    width: 50%;
-    max-width: 500px;
-    border-radius: 20px;
-    border: 4px solid #b08d57; /* bronzani okvir */
-    box-shadow: 0 8px 20px rgba(176,141,87,0.4);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hero img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 30px rgba(176,141,87,0.7); /* sjaj oko slike */
-}
-
-.hero-text {
-    width: 50%;
-    padding-right: 20px;
-}
-
-.hero-text h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 50px;
-    margin: 0 0 20px 0;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
-}
-
-.hero-text p {
-    font-size: 18px;
-    margin-top: 15px;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-    line-height: 1.7;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero img, .hero-text {
-        width: 90%;
-        padding: 0;
-    }
-
-    .hero-text h2 {
-        font-size: 40px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-}
-</style>
-
-
-
-
-
-<!-- ČETVRTA SEKCIJA -->
+<!-- HERO 5 - PUT ZRELOSTI -->
 <div class="hero">
     <img src="slika4.jpg" alt="Put zrelosti">
     <div class="hero-text">
@@ -335,30 +276,14 @@ body {
     </div>
 </div>
 
+<!-- SANOVI SEKCIJA -->
+<div class="dreams-section">
+    <h2>SAN 2021</h2>
+    <p>Sanjam da srećem drugaricu iz detinjstva. Ona se nalazi u kapsuli, veštačkoj komi. Ja sam na malom brdu i gledam. Desno je kuća, ima puno blata na travi. Videla sam je, ali su je vratili u kapsulu jer nije mogla da podnese zivot prepun straha. U snu ona ima dete od godinu dana. Na javi ga nema. Budim se sa osećajem: "Kakav glup san." Taj san mi je udario šamar realnosti.</p>
 
-
-
-
-<!-- SEKCIJA SANOVI -->
-<div class="dreams-section" style="max-width: 900px; margin: 50px auto; padding: 20px; color: #b08d57; font-family: Arial, sans-serif;">
-
-    <!-- SAN 2021 -->
-    <h2 style="text-align: center; font-family: 'Cinzel', serif; font-size: 40px; margin-bottom: 20px;">SAN 2021</h2>
-    <p style="text-align: justify; line-height: 1.7; font-size: 18px;">
-        Sanjam da srećem drugaricu iz detinjstva. Ona se nalazi u kapsuli, veštačkoj komi. Ja sam na malom brdu i gledam. Desno je kuća, ima puno blata na travi. Videla sam je, ali su je vratili u kapsulu jer nije mogla da podnese zivot prepun straha. U snu ona ima dete od godinu dana. Na javi ga nema. Budim se sa osećajem: "Kakav glup san." Taj san mi je udario šamar realnosti.
-    </p>
-
-    <!-- SAN 2025 -->
-    <h2 style="text-align: center; font-family: 'Cinzel', serif; font-size: 40px; margin: 40px 0 20px 0;">SAN 2025</h2>
-    <p style="text-align: justify; line-height: 1.7; font-size: 18px;">
-        Sanjam da sam na nepoznatom mestu, dugačak je hodnik sa čisto belim zidovima, svaki moj korak dodaje nove bele police sa knjigama uredno složenim. Kako koracam, tako se hodnik puni policama i knjigama. Budim se sa potpunom jasnoćom da je moj put edukacije, učenja psihologije i analize snova upravo moj put.
-    </p>
+    <h2>SAN 2025</h2>
+    <p>Sanjam da sam na nepoznatom mestu, dugačak je hodnik sa čisto belim zidovima, svaki moj korak dodaje nove bele police sa knjigama uredno složenim. Kako koracam, tako se hodnik puni policama i knjigama. Budim se sa potpunom jasnoćom da je moj put edukacije, učenja psihologije i analize snova upravo moj put.</p>
 </div>
-
-
-
-
-
 
 <!-- E-BOOK SEKCIJA SA OKVIROM -->
 <div class="ebook-section" style="max-width: 1000px; margin: 50px auto; padding: 30px; border: 4px solid #b08d57; border-radius: 20px; box-shadow: 0 8px 20px rgba(176,141,87,0.4); background-color: rgba(0,0,0,0.85); color: #b08d57;">
@@ -384,23 +309,13 @@ body {
 </div>
 
 
-
-
-
-
-
-
-<!-- MOTIVACIONA ZAVRSNA SEKCIJA -->
+<!-- MOTIVACIONA -->
 <div class="motivation-section">
     <h2>Dobro vi meni došli!</h2>
     <p>Ovo je moj svet – svet snova koji se ostvaruju, svet rasta i moći.</p>
     <p>2021. godine, kada sam se pitala „Ko sam ja?“, moj odgovor je bio: <strong>Ja sam majka.</strong></p>
     <p>Danas, moj odgovor je: <strong>Ja sam Jelena.</strong></p>
-    <p>Ja sam student psihologije.<br>
-       Ja sam web dizajner.<br>
-       Ja sam volonterka.<br>
-       Ja sam žena, ćerka, sestra.<br>
-       Ja imam bezbroj uloga… ali <strong>u svemu tome, ja sam ja.</strong></p>
+<p>Ja imam bezbroj uloga… ali <strong>u svemu tome, ja sam ja.</strong></p>
     <p>A ti? Ko si ti?<br>
        Ne dozvoli svetu da ti kaže ko si.<br>
        Ne dozvoli strahu da odlučuje umesto tebe.<br>
@@ -409,102 +324,11 @@ body {
     <p><strong>Zapamti:</strong> tvoja suština je tvoja moć. Ti si svetionik. Ti si promena. Ti si ono što želiš da budeš.</p>
 </div>
 
-<style>
-.motivation-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 4px solid #b08d57; /* bronza okvir */
-    border-radius: 20px;
-    background-color: #000; /* tamno crna pozadina */
-    color: #b08d57; /* bronza/nude boja */
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
-    text-align: center; /* centriran tekst */
-}
-
-.motivation-section h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 48px;
-    margin-bottom: 20px;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
-}
-
-.motivation-section p {
-    font-size: 18px;
-    margin: 15px 0;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .motivation-section {
-        width: 90%;
-        padding: 20px;
-    }
-
-    .motivation-section h2 {
-        font-size: 36px;
-    }
-
-    .motivation-section p {
-        font-size: 16px;
-    }
-}
-</style>
-
-
-
-
 <!-- FOOTER -->
 <footer>
     <hr>
     <p>Designed by Jelena Bogoeski. All rights reserved © 2025.</p>
 </footer>
-
-<style>
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #000; /* crna pozadina */
-    color: #b08d57; /* bronza/nude boja */
-    font-family: Arial, sans-serif;
-}
-
-footer hr {
-    border: 0;
-    height: 2px;
-    background: #b08d57; /* bronza linija */
-    width: 80%;
-    margin: 0 auto 20px auto;
-}
-
-footer p {
-    margin: 0;
-    font-size: 16px;
-    background: linear-gradient(45deg, #b08d57, #c9a27d);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    footer p {
-        font-size: 14px;
-    }
-}
-</style>
-
-
-
-
-
 </body>
 </html>
+
