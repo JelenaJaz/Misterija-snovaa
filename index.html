@@ -7,8 +7,8 @@
 <title>Misterija snova</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-<style?
-body {
+<style>
+    body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #000;
@@ -65,9 +65,11 @@ body {
     text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
 }
 
-/* REVERSE HERO */
-.hero.reverse {
-    flex-direction: row-reverse;
+/* CITATI */
+.citat {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 15px;
 }
 
 /* TEKST SEKCIJA */
@@ -119,26 +121,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     background-color: rgba(0,0,0,0.85);
-    color: #b08d57;
-}
-
-.ebook-section h2 {
-    font-family: 'Cinzel', serif;
-    font-size: 50px;
-    text-align: center;
-    margin-bottom: 30px;
-    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
-}
-
-.ebook-section p, .ebook-section ul {
-    font-size: 18px;
-    line-height: 1.8;
-}
-
-.ebook-section ul {
-    list-style-type: disc;
-    margin-left: 40px;
-    margin-bottom: 20px;
 }
 
 /* MOTIVACIONA SEKCIJA */
@@ -187,56 +169,160 @@ footer p {
     font-size: 16px;
 }
 
-/* RESPONSIVE MOBILE */
+/* === RESPONSIVE - STANDARD === */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column !important; /* forsira kolonu na mobilnom */
-        text-align: center !important;
+        flex-direction: column;
+        text-align: center;
         margin-bottom: 60px;
     }
 
     .hero img, .hero-text {
-        width: 90% !important; /* slike i tekst zauzimaju većinu ekrana */
-        padding: 0 !important;
-        margin-bottom: 20px;
+        width: 90%;
+        padding: 0;
     }
 
     .hero-text h1, .hero-text h2 {
-        font-size: 32px !important;
+        font-size: 40px;
     }
 
     .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
-        font-size: 16px !important;
+        font-size: 16px;
     }
 
     .text-section h2 {
-        font-size: 26px;
-    }
-
-    .dreams-section h2 {
         font-size: 28px;
     }
 
-    .motivation-section h2 {
-        font-size: 30px;
-    }
-
-    .ebook-section {
-        padding: 20px;
-        max-width: 95%;
-        box-sizing: border-box;
-    }
-
-    .ebook-section h2 {
+    .dreams-section h2 {
         font-size: 32px;
+        margin-bottom: 20px;
     }
 
-    .ebook-section p, .ebook-section ul {
-        font-size: 16px;
+    .motivation-section h2 {
+        font-size: 36px;
     }
 
     footer p {
         font-size: 14px;
+    }
+}
+
+/* === MOBILNA OPTIMIZACIJA “PIXEL PERFECT” === */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        margin: 30px auto !important;
+        gap: 20px !important;
+    }
+
+    .hero img {
+        width: 100% !important;
+        max-width: 350px !important;
+        height: auto !important;
+        margin-bottom: 15px;
+        border-width: 3px !important;
+        box-shadow: 0 5px 15px rgba(176,141,87,0.5) !important;
+    }
+
+    .hero-text {
+        width: 90% !important;
+        padding: 0 10px !important;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 7vw !important;
+        line-height: 1.2 !important;
+    }
+
+    .hero-text p, .citat {
+        font-size: 4.5vw !important;
+        line-height: 1.5 !important;
+    }
+
+    .text-section, .dreams-section {
+        width: 95% !important;
+        padding: 0 10px !important;
+        margin: 20px auto !important;
+    }
+
+    .text-section h2, .dreams-section h2 {
+        font-size: 6vw !important;
+        margin-bottom: 15px !important;
+    }
+
+    .text-section p, .dreams-section p {
+        font-size: 4.5vw !important;
+        line-height: 1.6 !important;
+    }
+
+    .ebook-section {
+        width: 95% !important;
+        padding: 20px !important;
+        margin: 20px auto !important;
+        border-width: 2px !important;
+        border-radius: 15px !important;
+        font-size: 4.5vw !important;
+        box-shadow: 0 5px 15px rgba(176,141,87,0.4) !important;
+    }
+
+    .ebook-section h2 {
+        font-size: 7vw !important;
+    }
+
+    .motivation-section {
+        width: 95% !important;
+        padding: 20px !important;
+        font-size: 4.5vw !important;
+        text-align: center !important;
+    }
+
+    .motivation-section h2 {
+        font-size: 7vw !important;
+        margin-bottom: 15px !important;
+    }
+
+    .motivation-section p {
+        margin: 10px 0 !important;
+    }
+
+    footer {
+        padding: 15px 10px !important;
+    }
+
+    footer p {
+        font-size: 4vw !important;
+    }
+
+    footer hr {
+        width: 90% !important;
+    }
+}
+
+/* === ZA VEOMA MALI TELEFON (≤480px) === */
+@media (max-width: 480px) {
+    .hero img {
+        max-width: 100% !important;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 8vw !important;
+    }
+
+    .hero-text p, .citat,
+    .text-section p, .dreams-section p,
+    .motivation-section p, .ebook-section {
+        font-size: 5vw !important;
+    }
+
+    .text-section h2, .dreams-section h2, .motivation-section h2 {
+        font-size: 6vw !important;
+    }
+
+    .ebook-section h2 {
+        font-size: 7vw !important;
     }
 }
 </style>
@@ -363,6 +449,7 @@ footer p {
 </footer>
 </body>
 </html>
+
 
 
 
