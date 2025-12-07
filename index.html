@@ -7,6 +7,7 @@
 <title>Misterija snova</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+<style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -62,11 +63,6 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: 1px 1px 6px rgba(176,141,87,0.6);
-}
-
-/* Hero sekcija sa obrnuto (reverse) rasporedom */
-.hero.reverse {
-    flex-direction: row-reverse;
 }
 
 /* CITATI */
@@ -125,7 +121,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     background-color: rgba(0,0,0,0.85);
-    color: #b08d57;
 }
 
 /* MOTIVACIONA SEKCIJA */
@@ -174,29 +169,33 @@ footer p {
     font-size: 16px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE MOBILE */
 @media (max-width: 768px) {
-    .hero, .hero.reverse {
-        flex-direction: column !important; /* sve hero sekcije u kolonu na mobilnom */
+    /* Hero sekcije */
+    .hero {
+        flex-direction: column !important;
         text-align: center;
         margin-bottom: 60px;
     }
 
-    .hero img, .hero-text {
+    .hero img {
         width: 90%;
-        padding: 0;
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 20px;
     }
 
     .hero-text {
-        padding-left: 0 !important;
+        width: 95%;
+        padding: 0;
     }
 
     .hero-text h1, .hero-text h2 {
-        font-size: 32px;
+        font-size: 32px !important;
     }
 
     .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
-        font-size: 16px;
+        font-size: 16px !important;
     }
 
     .text-section h2 {
@@ -205,18 +204,31 @@ footer p {
 
     .dreams-section h2 {
         font-size: 28px;
-        margin-bottom: 20px;
     }
 
     .motivation-section h2 {
-        font-size: 32px;
+        font-size: 30px;
+    }
+
+    .ebook-section {
+        padding: 20px;
+        max-width: 95%;
+        box-sizing: border-box;
+    }
+
+    .ebook-section h2 {
+        font-size: 32px !important;
+    }
+
+    .ebook-section p, .ebook-section ul {
+        font-size: 16px !important;
     }
 
     footer p {
         font-size: 14px;
     }
 }
-
+</style>
 
 </head>
 <body>
@@ -341,6 +353,7 @@ footer p {
 </footer>
 </body>
 </html>
+
 
 
 
