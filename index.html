@@ -195,6 +195,28 @@ footer p {
         margin-bottom: 60px;
     }
 
+    /* Popravka za hero sekcije sa inline row-reverse */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column !important; /* forsira kolonu na mobilnom */
+        text-align: center !important;
+    }
+
+    .hero img, .hero-text {
+        width: 90% !important; /* slike i tekst zauzimaju većinu ekrana */
+        padding: 0 !important;
+    }
+
+    .hero-text h1, .hero-text h2 {
+        font-size: 36px !important;
+    }
+
+    .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
+        font-size: 16px !important;
+    }
+}
+
+
     .hero img {
         width: 90%;
         max-width: 100%;
@@ -369,6 +391,7 @@ footer p {
 </footer>
 </body>
 </html>
+
 
 
 
