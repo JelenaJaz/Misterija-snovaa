@@ -23,6 +23,11 @@ body {
     margin: 50px auto 80px auto;
     padding: 20px;
     gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero.reverse-hero {
+    flex-direction: row-reverse;
 }
 
 .hero img {
@@ -72,78 +77,62 @@ body {
 }
 
 /* TEKST SEKCIJA */
-.text-section {
-    max-width: 900px;
-    margin: 0 auto 80px auto;
-    padding: 0 20px;
+.text-section, .dreams-section, .ebook-section, .motivation-section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.text-section h2, .dreams-section h2, .motivation-section h2, .ebook-section h2 {
+    text-align: center;
+    font-family: 'Cinzel', serif;
 }
 
 .text-section h2 {
-    text-align: center;
     font-size: 36px;
     margin-bottom: 30px;
 }
 
-.text-section p {
-    text-align: justify;
+.text-section p, .dreams-section p, .ebook-section p, .motivation-section p {
     font-size: 18px;
     line-height: 1.8;
     margin-bottom: 20px;
 }
 
 /* SANOVI SEKCIJA */
-.dreams-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 20px;
-}
-
 .dreams-section h2 {
-    text-align: center;
-    font-family: 'Cinzel', serif;
     font-size: 40px;
     margin-bottom: 20px;
 }
 
-.dreams-section p {
-    text-align: justify;
-    line-height: 1.7;
-    font-size: 18px;
-}
-
 /* E-BOOK SEKCIJA */
 .ebook-section {
-    max-width: 1000px;
-    margin: 50px auto;
-    padding: 30px;
     border: 4px solid #b08d57;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     background-color: rgba(0,0,0,0.85);
+    color: #b08d57;
+}
+
+.ebook-section h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
+}
+
+.ebook-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    margin-bottom: 20px;
 }
 
 /* MOTIVACIONA SEKCIJA */
 .motivation-section {
-    max-width: 900px;
-    margin: 50px auto;
-    padding: 30px;
     border: 4px solid #b08d57;
     border-radius: 20px;
     background-color: #000;
     color: #b08d57;
-    font-family: Arial, sans-serif;
-    line-height: 1.8;
     text-align: center;
-}
-
-.motivation-section h2 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-.motivation-section p {
-    font-size: 18px;
-    margin: 15px 0;
 }
 
 /* FOOTER */
@@ -152,7 +141,6 @@ footer {
     padding: 20px 0;
     background-color: #000;
     color: #b08d57;
-    font-family: Arial, sans-serif;
 }
 
 footer hr {
@@ -163,15 +151,10 @@ footer hr {
     margin: 0 auto 20px auto;
 }
 
-footer p {
-    margin: 0;
-    font-size: 16px;
-}
-
 /* RESPONSIVE */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
         margin-bottom: 60px;
     }
@@ -185,7 +168,7 @@ footer p {
         font-size: 40px;
     }
 
-    .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
+    .hero-text p, .citat, .text-section p, .dreams-section p, .ebook-section p, .motivation-section p {
         font-size: 16px;
     }
 
@@ -195,7 +178,10 @@ footer p {
 
     .dreams-section h2 {
         font-size: 32px;
-        margin-bottom: 20px;
+    }
+
+    .ebook-section h2 {
+        font-size: 36px;
     }
 
     .motivation-section h2 {
@@ -231,8 +217,8 @@ footer p {
     <p>Moja priča zaista počinje u januaru 2024. godine. Tada počinjem da beležim snove, vodim dnevnik snova i istražujem sopstveni svet, osluškujući signale svoje intuicije. Bez ikakvog formalnog znanja, sa velikom željom i otvorenim srcem, započinjem svoj put promene i samospoznaje.</p>
 </div>
 
-<!-- HERO 2 - TEKST LEVO, SLIKA DESNO -->
-<div class="hero" style="flex-direction: row-reverse;">
+<!-- HERO 2 -->
+<div class="hero reverse-hero">
     <img src="slika.jpg" alt="Moj put kroz snove">
     <div class="hero-text">
         <h1>Moj put kroz snove</h1>
@@ -241,20 +227,20 @@ footer p {
     </div>
 </div>
 
-<!-- HERO 3 - SLIKA LEVO, TEKST DESNO -->
+<!-- HERO 3 -->
 <div class="hero">
     <img src="slika2.jpg" alt="Moj kvantni skok">
     <div class="hero-text">
         <h1>Kvantni skok</h1>
-        <p>Dve godine analizirajući svoje snove, kojih je bilo preko 1000, kretala sam se kroz knjige Freuda, Junga, Ivana Nastovica i savladavala tehnike analize. Očistila sam sebe, oslobodila se unutrašnjih blokada. Bilo je bolno, nije bilo lako, ali je bilo moćno. Ja sam ja – ono što sam oduvek bila. Oprostila sam sebi i drugima. </p>
+        <p>Dve godine analizirajući svoje snove, kojih je bilo preko 1000, kretala sam se kroz knjige Freuda, Junga, Ivana Nastovica i savladavala tehnike analize. Očistila sam sebe, oslobodila se unutrašnjih blokada. Bilo je bolno, nije bilo lako, ali je bilo moćno. Ja sam ja – ono što sam oduvek bila. Oprostila sam sebi i drugima.</p>
         <p>Onda se desio kvantni skok, iako nisam znala šta je to u teoriji. Po Jungu, to je trenutak kada se svest otvara, a nesvesno daje signale transformacije. Pogledala sam se u ogledalo i rekla:</p>
         <p>"Ja želim da upišem fakultet psihologije, da treniram self defence, da idem na edukacije, da pišem e-book gde opisujem i objašnjavam sažeto sve naučeno, da poklanjam newsletter, da radim na sebi, da meditiram, da praktikujem yogu, da osećam energiju... ja želim mir."</p>
         <p>Mnogo ljudi u mom okruženju je osetilo moj kvantni skok, dok ja nisam ni primetila da se dešava.</p>
     </div>
 </div>
 
-<!-- HERO 4 - ENERGIJA -->
-<div class="hero" style="flex-direction: row-reverse;">
+<!-- HERO 4 -->
+<div class="hero reverse-hero">
     <img src="slika3.jpg" alt="Energetski put">
     <div class="hero-text">
         <h2>ENERGIJA</h2>
@@ -264,7 +250,7 @@ footer p {
     </div>
 </div>
 
-<!-- HERO 5 - PUT ZRELOSTI -->
+<!-- HERO 5 -->
 <div class="hero">
     <img src="slika4.jpg" alt="Put zrelosti">
     <div class="hero-text">
@@ -278,43 +264,36 @@ footer p {
 <!-- SANOVI SEKCIJA -->
 <div class="dreams-section">
     <h2>SAN 2021</h2>
-    <p>Sanjam da srećem drugaricu iz detinjstva. Ona se nalazi u kapsuli, veštačkoj komi. Ja sam na malom brdu i gledam. Desno je kuća, ima puno blata na travi. Videla sam je, ali su je vratili u kapsulu jer nije mogla da podnese zivot prepun straha. U snu ona ima dete od godinu dana. Na javi ga nema. Budim se sa osećajem: "Kakav glup san." Taj san mi je udario šamar realnosti.</p>
+    <p>Sanjam da srećem drugaricu iz detinjstva. Ona se nalazi u kapsuli, veštačkoj komi. Ja sam na malom brdu i gledam. Desno je kuća, ima puno blata na travi. Videla sam je, ali su je vratili u kapsulu jer nije mogla da podnese život prepun straha. U snu ona ima dete od godinu dana. Na javi ga nema. Budim se sa osećajem: "Kakav glup san." Taj san mi je udario šamar realnosti.</p>
 
     <h2>SAN 2025</h2>
     <p>Sanjam da sam na nepoznatom mestu, dugačak je hodnik sa čisto belim zidovima, svaki moj korak dodaje nove bele police sa knjigama uredno složenim. Kako koracam, tako se hodnik puni policama i knjigama. Budim se sa potpunom jasnoćom da je moj put edukacije, učenja psihologije i analize snova upravo moj put.</p>
 </div>
 
-<!-- E-BOOK SEKCIJA SA OKVIROM -->
-<div class="ebook-section" style="max-width: 1000px; margin: 50px auto; padding: 30px; border: 4px solid #b08d57; border-radius: 20px; box-shadow: 0 8px 20px rgba(176,141,87,0.4); background-color: rgba(0,0,0,0.85); color: #b08d57;">
-    <h2 style="font-family: 'Cinzel', serif; font-size: 50px; text-align: center; margin-bottom: 30px; text-shadow: 2px 2px 12px rgba(176,141,87,0.7);">
-        E-book – Put kroz svet snova
-    </h2>
-    <p style="font-size: 18px; line-height: 1.8; margin-bottom: 15px;">
-        Moj e-book je rezultat godina introspektivnog rada i analize snova. Sastavljen je u skladu sa Jungovim principima i arhetipovima, i pruža praktičan uvod u svet nesvesnog:
-    </p>
-    <ul style="font-size: 18px; line-height: 1.8; list-style-type: disc; margin-left: 40px; margin-bottom: 20px;">
+<!-- E-BOOK SEKCIJA -->
+<div class="ebook-section">
+    <h2>E-book – Put kroz svet snova</h2>
+    <p>Moj e-book je rezultat godina introspektivnog rada i analize snova. Sastavljen je u skladu sa Jungovim principima i arhetipovima, i pruža praktičan uvod u svet nesvesnog:</p>
+    <ul>
         <li><strong>Uvod u snove</strong> – kako ih razumeti, zapisivati i analizirati.</li>
         <li><strong>Anima i Animus</strong> – unutrašnji muški i ženski aspekti koji oblikuju naše ponašanje i odnose.</li>
         <li><strong>Persona</strong> – maska koju nosimo u svetu i kako ona utiče na naše samopouzdanje i odnose.</li>
         <li><strong>Senka</strong> – skriveni aspekti ličnosti koje često ignorišemo, a koji kriju ključ za lični rast.</li>
         <li><strong>Ego</strong> – svesni deo sebe, koji povezuje sve unutrašnje aspekte i vodi naš put prema integraciji.</li>
     </ul>
-    <p style="font-size: 18px; line-height: 1.8; margin-top: 20px;">
-        Ovaj e-book je zamišljen kao vodič za svakoga ko želi da bolje razume svoje snove, poveže ih sa unutrašnjim svetom i primeni saznanja za lični rast.
-    </p>
-    <p style="font-size: 18px; line-height: 1.8; margin-top: 30px; text-align: center; font-weight: bold; text-shadow: 1px 1px 6px rgba(176,141,87,0.6);">
-        Dovoljno je da mi se javite na <a href="mailto:tvojemail@example.com" style="color: #b08d57; text-decoration: underline;">mail</a> – to je dokaz da vam je potrebno – i odmah dobijate newsletter kao poklon, kao i svaki sledeći koji bude izlazio.
+    <p>Ovaj e-book je zamišljen kao vodič za svakoga ko želi da bolje razume svoje snove, poveže ih sa unutrašnjim svetom i primeni saznanja za lični rast.</p>
+    <p style="text-align:center; font-weight:bold; text-shadow:1px 1px 6px rgba(176,141,87,0.6);">
+        Dovoljno je da mi se javite na <a href="mailto:tvojemail@example.com" style="color:#b08d57; text-decoration:underline;">mail</a> – to je dokaz da vam je potrebno – i odmah dobijate newsletter kao poklon, kao i svaki sledeći koji bude izlazio.
     </p>
 </div>
 
-
-<!-- MOTIVACIONA -->
+<!-- MOTIVACIONA SEKCIJA -->
 <div class="motivation-section">
     <h2>Dobro vi meni došli!</h2>
     <p>Ovo je moj svet – svet snova koji se ostvaruju, svet rasta i moći.</p>
     <p>2021. godine, kada sam se pitala „Ko sam ja?“, moj odgovor je bio: <strong>Ja sam majka.</strong></p>
     <p>Danas, moj odgovor je: <strong>Ja sam Jelena.</strong></p>
-<p>Ja imam bezbroj uloga… ali <strong>u svemu tome, ja sam ja.</strong></p>
+    <p>Ja imam bezbroj uloga… ali <strong>u svemu tome, ja sam ja.</strong></p>
     <p>A ti? Ko si ti?<br>
        Ne dozvoli svetu da ti kaže ko si.<br>
        Ne dozvoli strahu da odlučuje umesto tebe.<br>
