@@ -7,7 +7,6 @@
 <title>Misterija snova</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-<style>
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -177,14 +176,10 @@ footer p {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
+    .hero, .hero.reverse {
+        flex-direction: column !important; /* sve hero sekcije u kolonu na mobilnom */
         text-align: center;
         margin-bottom: 60px;
-    }
-
-    .hero.reverse {
-        flex-direction: column; /* override row-reverse na mobilnom */
     }
 
     .hero img, .hero-text {
@@ -192,8 +187,12 @@ footer p {
         padding: 0;
     }
 
+    .hero-text {
+        padding-left: 0 !important;
+    }
+
     .hero-text h1, .hero-text h2 {
-        font-size: 40px;
+        font-size: 32px;
     }
 
     .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
@@ -201,23 +200,22 @@ footer p {
     }
 
     .text-section h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .dreams-section h2 {
-        font-size: 32px;
+        font-size: 28px;
         margin-bottom: 20px;
     }
 
     .motivation-section h2 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     footer p {
         font-size: 14px;
     }
 }
-</style>
 
 
 </head>
@@ -343,6 +341,7 @@ footer p {
 </footer>
 </body>
 </html>
+
 
 
 
