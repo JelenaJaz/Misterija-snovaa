@@ -121,6 +121,7 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     background-color: rgba(0,0,0,0.85);
+    color: #b08d57;
 }
 
 /* MOTIVACIONA SEKCIJA */
@@ -169,38 +170,64 @@ footer p {
     font-size: 16px;
 }
 
-/* RESPONSIVE */
+/* RESPONSIVE - MOBILE */
 @media (max-width: 768px) {
     .hero {
-        flex-direction: column;
+        flex-direction: column !important;
         text-align: center;
-        margin-bottom: 60px;
+        margin: 30px auto;
+        gap: 20px;
     }
 
-    .hero img, .hero-text {
-        width: 90%;
-        padding: 0;
+    .hero img {
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+
+    .hero-text {
+        width: 100%;
+        padding: 0 10px;
     }
 
     .hero-text h1, .hero-text h2 {
-        font-size: 40px;
+        font-size: 32px !important;
+        line-height: 1.2;
     }
 
     .hero-text p, .citat, .text-section p, .dreams-section p, .motivation-section p {
-        font-size: 16px;
+        font-size: 16px !important;
+        line-height: 1.6;
     }
 
     .text-section h2 {
-        font-size: 28px;
-    }
-
-    .dreams-section h2 {
-        font-size: 32px;
+        font-size: 26px;
         margin-bottom: 20px;
     }
 
+    .dreams-section h2 {
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
     .motivation-section h2 {
-        font-size: 36px;
+        font-size: 28px;
+        margin-bottom: 15px;
+    }
+
+    .ebook-section {
+        padding: 20px;
+        margin: 30px 10px;
+        border-width: 3px;
+        border-radius: 15px;
+    }
+
+    .ebook-section h2 {
+        font-size: 32px !important;
+    }
+
+    .ebook-section p, .ebook-section ul {
+        font-size: 16px !important;
     }
 
     footer p {
@@ -208,6 +235,7 @@ footer p {
     }
 }
 </style>
+
 </head>
 <body>
 
@@ -331,4 +359,5 @@ footer p {
 </footer>
 </body>
 </html>
+
 
