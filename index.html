@@ -8,7 +8,7 @@
 <title>Misterija snova</title>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
-<style>
+/* GENERAL */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -25,6 +25,7 @@ body {
     margin: 50px auto 80px auto;
     padding: 20px;
     gap: 40px;
+    flex-wrap: wrap;
 }
 
 .hero img {
@@ -46,6 +47,11 @@ body {
     padding-left: 20px;
 }
 
+.reverse-hero {
+    flex-direction: row-reverse;
+}
+
+/* HERO TEXT STYLING */
 .hero-text h1, .hero-text h2 {
     font-family: 'Cinzel', serif;
     font-size: 60px;
@@ -122,6 +128,26 @@ body {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(176,141,87,0.4);
     background-color: rgba(0,0,0,0.85);
+    color: #b08d57;
+}
+
+.ebook-section h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 12px rgba(176,141,87,0.7);
+}
+
+.ebook-section p, .ebook-section ul {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.ebook-section ul {
+    list-style-type: disc;
+    margin-left: 40px;
 }
 
 /* MOTIVACIONA SEKCIJA */
@@ -172,8 +198,8 @@ footer p {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
+    .hero, .reverse-hero {
+        flex-direction: column !important;
         text-align: center;
         margin-bottom: 60px;
     }
@@ -208,7 +234,7 @@ footer p {
         font-size: 14px;
     }
 }
-</style>
+
 </head>
 <body>
 
@@ -332,3 +358,4 @@ footer p {
 </footer>
 </body>
 </html>
+
